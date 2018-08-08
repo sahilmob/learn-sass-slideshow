@@ -18,7 +18,7 @@ body {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 42px;
   font-weight: normal;
-  color: #222; }
+  color: #953263; }
 
 ::selection {
   color: #fff;
@@ -45,12 +45,12 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #222;
+  color: #953263;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: uppercase;
+  text-transform: normal;
   text-shadow: none;
   word-wrap: break-word; }
 
@@ -230,7 +230,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #222;
+  border: 4px solid #953263;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal section img.plain {
@@ -272,14 +272,96 @@ body {
   .backgrounds {
     background-color: #fff; } }
 
+pre {
+  box-shadow: none !important;
+  border: none !important; }
+
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
   border: none;
   box-shadow: none; }
 
+.slide-title {
+  text-align: left;
+  font-size: 60px !important;
+  display: flex; }
+
+.reveal .controls {
+  color: #b3d4fc; }
+
 #s1 img {
   width: 30%; }
 
-.reveal .controls {
+#s1 span {
+  font-size: 16px;
+  font-weight: 700; }
+
+#s1 h4 {
   color: #699; }
+  #s1 h4 strong {
+    color: #953263; }
+
+#s2 {
+  text-align: left;
+  display: flex !important;
+  flex-direction: column; }
+  #s2 q {
+    color: #699;
+    font-size: 32px;
+    font-weight: 700; }
+  #s2 em {
+    font-size: 14px;
+    text-align: right;
+    align-self: flex-end;
+    color: #953263;
+    align-self: flex-end; }
+  #s2 > .fr-1 {
+    margin-top: 60px; }
+    #s2 > .fr-1 #pre-process-flow {
+      align-items: center;
+      justify-content: space-between; }
+      #s2 > .fr-1 #pre-process-flow .fa-file-code {
+        color: #699;
+        font-size: 100px; }
+        #s2 > .fr-1 #pre-process-flow .fa-file-code .fa-sass,
+        #s2 > .fr-1 #pre-process-flow .fa-file-code .fa-css3 {
+          color: #953263 !important;
+          font-size: 20px;
+          top: -15px;
+          left: -15px;
+          background-color: #b3d4fc;
+          border-radius: 50%;
+          padding: 10px; }
+      #s2 > .fr-1 #pre-process-flow .fa-redo {
+        color: #699;
+        font-size: 100px; }
+      #s2 > .fr-1 #pre-process-flow .fa-window-maximize {
+        color: #699;
+        font-size: 100px; }
+
+#s3 {
+  text-align: left; }
+  #s3 ul {
+    margin: 30px 0 0 70px;
+    list-style: none; }
+    #s3 ul li {
+      color: #699;
+      align-items: center; }
+      #s3 ul li::before {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: #699;
+        transform: rotate(-45deg);
+        margin-right: 15px; }
+
+#s4 #nesting-code pre {
+  margin-left: 50px; }
+  #s4 #nesting-code pre i {
+    right: -15px;
+    top: 40px;
+    background-color: #b3d4fc;
+    border-radius: 50%;
+    padding: 10px; }

@@ -18,15 +18,15 @@
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #fff;
 
-$mainColor: #222;
-$headingColor: #222;
-
+$mainColor: #953263;
+$headingColor: $mainColor;
+$secondaryColor: #699;
 $mainFontSize: 42px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
+$headingTextTransform: normal;
 $headingFontWeight: 600;
 $linkColor: #2a76dd;
 $linkColorHover: lighten( $linkColor, 15% );
@@ -48,18 +48,123 @@ section.has-dark-background {
 @import "../template/theme";
 // ---------------------------------------------
 
+pre{
+	box-shadow: none !important;
+	border: none !important;
+}
 .reveal section img {
 	margin: 15px 0px;
 	background: rgba(255,255,255,0.12);
 	border: none;
-
 	box-shadow: none;
 }
 
-#s1 img {
-	width: 30%;
+.slide-title{
+	text-align: left;
+	font-size: 60px !important;
+	display: flex
+}
+.reveal .controls {
+	color: #b3d4fc;
 }
 
-.reveal .controls {
-	color: #699;
+#s1  {
+	img{
+		width: 30%;
+	}
+	span{
+		font-size: 16px;
+		font-weight: 700;
+	}
+	h4{
+		color:$secondaryColor ;
+		strong {
+			color: $mainColor
+		}
+	}
+}
+
+#s2{
+	text-align: left;
+	display: flex !important;
+	flex-direction: column;
+	q{
+		color: $secondaryColor;
+		font-size: 32px;
+		font-weight: 700;
+		
+	}
+	em{
+		font-size: 14px;
+		text-align: right;
+		align-self: flex-end;
+		color: $mainColor;
+		align-self: flex-end;
+	}
+	>.fr-1{
+		margin-top: 60px;
+		#pre-process-flow{
+			align-items: center;
+			justify-content: space-between;
+			.fa-file-code{
+				color: $secondaryColor;
+				font-size: 100px;
+				.fa-sass,
+				.fa-css3{
+					color: $mainColor !important;
+					font-size: 20px;
+					top: -15px;
+					left: -15px;
+					background-color: #b3d4fc;
+					border-radius: 50%;
+					padding: 10px;
+				}
+
+			}
+			.fa-redo{
+				color: $secondaryColor;
+				font-size: 100px;
+			}
+			.fa-window-maximize {
+				color: $secondaryColor;
+				font-size: 100px;
+			}
+		}
+	}
+}
+
+#s3{
+	text-align: left;
+	ul{
+		margin: 30px 0 0 70px;
+		list-style: none;
+		li{
+			color: $secondaryColor;
+			align-items: center;
+			&::before{
+				content: '';
+				display: block;
+				width: 16px;
+				height: 16px;
+				background-color: $secondaryColor;
+				transform: rotate(-45deg);
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+#s4 {
+	#nesting-code{
+		pre{
+			margin-left: 50px;
+			i{
+				right: -15px;
+				top: 40px;
+				background-color: #b3d4fc;
+				border-radius: 50%;
+				padding: 10px
+			}
+		}
+	}
 }

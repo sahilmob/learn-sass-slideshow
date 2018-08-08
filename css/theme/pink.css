@@ -277,3 +277,9 @@ body {
   background: rgba(255, 255, 255, 0.12);
   border: none;
   box-shadow: none; }
+
+#s1 img {
+  width: 30%; }
+
+.reveal .controls {
+  color: #699; }

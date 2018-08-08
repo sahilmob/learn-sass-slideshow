@@ -59,9 +59,20 @@
 				<section id="s4">
             <span class="slide-title">Nesting</span>
 <div id="nesting-code" class="flex">
-    <pre class="relative fragment">
-        <i class="fab fa-css3 absolute flex"></i>
-        <code>#main p {
+  <pre class="fragment relative">
+    <i class="fab fa-sass absolute flex"></i>
+    <code>#main p
+  color: #00ff00
+  width: 97%
+  .redbox 
+    background-color: #ff0000
+    color: #000000
+    </code>
+  </pre>
+  <i class="fas fa-long-arrow-alt-right fragment"></i>
+  <pre class="relative fragment">
+      <i class="fab fa-css3 absolute flex"></i>
+      <code>#main p {
   color: #00ff00;
   width: 97%; 
 }
@@ -70,15 +81,67 @@
   color: #000000; 
 }</code>          
 </pre>
+</div>
+				</section>
+				<section id="s5">
+            <span class="slide-title">Nesting :pseudo classes</span>
+<div id="nesting-code" class="flex">
   <pre class="fragment relative">
     <i class="fab fa-sass absolute flex"></i>
-    <code>#main p
-  color: #00ff00
-  width: 97%
-    .redbox 
-      background-color: #ff0000
-      color: #000000
-</code>
+    <code>#main 
+  color: black;
+  .link 
+    font-weight: bold
+    &:hover
+      color: red
+    </code>
+  </pre>
+  <i class="fas fa-long-arrow-alt-right fragment"></i>
+  <pre class="relative fragment">
+      <i class="fab fa-css3 absolute flex"></i>
+      <code>#main {
+  color: black; 
+}
+
+#main .link {
+  font-weight: bold; 
+}
+#main .link:hover {
+  color: red; 
+}</code>          
+</pre>
+
+</div>
+<h6 class="fragment">Also applies for other pseudo classes like: <br>::before, ::after, :focus...etc</h6>
+				</section>
+				<section id="s6">
+            <span class="slide-title">Variables</span>
+<div id="nesting-code" class="flex">
+  <pre class="relative fragment">
+    <i class="fab fa-sass absolute flex"></i>
+    <code>$mainColor: #3bbfce
+$margin: 16px
+      
+.content_navigation 
+  border-color: $mainColor
+                
+.border 
+  padding: $margin / 2
+  margin: $margin / 2
+  border-color: $mainColor</code>
+  </pre>
+  <i class="fas fa-long-arrow-alt-right fragment"></i>
+  <pre class="relative fragment">
+    <i class="fab fa-css3 absolute flex"></i>
+    <code>.content_navigation {
+  border-color: #3bbfce;
+}
+                
+.border {
+  padding: 8px;
+  margin: 8px;
+  border-color: #3bbfce;
+}</code>
   </pre>
 </div>
 				</section>

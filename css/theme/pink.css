@@ -357,11 +357,28 @@ pre {
         transform: rotate(-45deg);
         margin-right: 15px; }
 
-#s4 #nesting-code pre {
-  margin-left: 50px; }
-  #s4 #nesting-code pre i {
+#s4 #nesting-code,
+#s5 #nesting-code,
+#s6 #nesting-code {
+  align-items: center; }
+  #s4 #nesting-code .fa-long-arrow-alt-right,
+  #s5 #nesting-code .fa-long-arrow-alt-right,
+  #s6 #nesting-code .fa-long-arrow-alt-right {
+    margin: 0 25px; }
+  #s4 #nesting-code pre i,
+  #s5 #nesting-code pre i,
+  #s6 #nesting-code pre i {
     right: -15px;
     top: 40px;
     background-color: #b3d4fc;
     border-radius: 50%;
     padding: 10px; }
+
+#s4 h6,
+#s5 h6,
+#s6 h6 {
+  color: #699;
+  text-align: left; }
+
+.reveal .progress {
+  color: #953263; }

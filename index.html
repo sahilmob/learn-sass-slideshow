@@ -145,12 +145,247 @@ $margin: 16px
   </pre>
 </div>
 				</section>
+				<section id="s7">
+					<span class="slide-title">Mixins</span>
+<div id="nesting-code" class="flex">
+<pre class="relative fragment">
+	<i class="fab fa-sass absolute flex"></i>
+	<code>=transform($property)
+  -webkit-transform: $property
+  -ms-transform: $property
+  transform: $property
+	
+.box
+  +transform(rotate(30deg))
+
+.title
+  +transform(rotate(60deg))	</code>
+</pre>
+<i class="fas fa-long-arrow-alt-right fragment"></i>
+<pre class="relative fragment">
+	<i class="fab fa-css3 absolute flex"></i>
+	<code>.box {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.title {
+  -webkit-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+
+	</code>
+</pre>
+</div>
+			</section>
+				<section id="s8">
+					<span class="slide-title">Operators</span>
+<div id="nesting-code" class="flex">
+<pre class="relative fragment">
+	<i class="fab fa-sass absolute flex"></i>
+	<code>.container
+  width: 100%
+	
+.article
+  float: left
+  width: 600px / 3px
+
+.aside
+  float: right
+  width: 300px / 10px</code>
+</pre>
+<i class="fas fa-long-arrow-alt-right fragment"></i>
+<pre class="relative fragment">
+	<i class="fab fa-css3 absolute flex"></i>
+	<code>.container {
+  width: 100%;
+}
+
+.article {
+  float: left;
+  width: 200px;
+}
+
+.aside {
+  float: right;
+  width: 30px;
+}
+
+	</code>
+</pre>
+</div>
+<h6 class="fragment">Also applies for other operators: + - * / and %</h6>
+
+			</section>
+				<section id="s9">
+					<span class="slide-title">Partials & Imports</span>
+
+<div id="nesting-code" class="flex">
+		<div id="files" class="fragment flex">
+				<span class="file">
+						<i class="far fa-file block"></i>
+						<span>_header.sass</span>
+				</span>
+				<span class="file">
+						<i class="far fa-file block"></i>
+						<span>_sidebar.sass</span>
+				</span>
+				<span class="file">
+						<i class="far fa-file block"></i>
+						<span>_footer.sass</span>
+				</span>
+
+			</div>
+			<i class="fas fa-long-arrow-alt-right fragment"></i>
+<pre class="relative fragment">
+	<i class="fab fa-sass absolute flex"></i>
+	<code>@import header
+@import sidebar
+@import footer
+	</code>
+</pre>
+<i class="fas fa-long-arrow-alt-right fragment"></i>
+<pre class="relative fragment">
+	<i class="fab fa-css3 absolute flex"></i>
+	<code>.header {
+  .
+  .
+}
+
+.sidebar {
+  .
+  .
+}
+
+.footer {
+  .
+  .
+}
+	</code>
+</pre>
+</div>
+			</section>
+				<section id="s10">
+					<span class="slide-title">Lists</span>
+
+<div id="nesting-code" class="flex">
+<pre class="relative fragment">
+	<i class="fab fa-sass absolute flex"></i>
+	<code>$buttonConfig: 'save' 50px, 'cancel' 70px   
+
+@each $tuple in $buttonConfig 
+  .button-#{nth($tuple, 1)} 
+    width: nth($tuple, 2)
+	</code>
+</pre>
+<i class="fas fa-long-arrow-alt-right fragment"></i>
+<pre class="relative fragment">
+	<i class="fab fa-css3 absolute flex"></i>
+	<code>.button-save
+  width: 50px;
+
+.button-cancel
+  width: 70px;
+	</code>
+</pre>
+</div>
+			</section>
+				<section id="s11">
+					<span class="slide-title">While</span>
+
+<div id="nesting-code" class="flex">
+<pre class="relative fragment">
+	<i class="fab fa-sass absolute flex"></i>
+	<code>$i: 6;
+@while $i > 0
+  .item-#{$i} 
+    width: 2em * $i; 
+  $i: $i - 2;
+	</code>
+</pre>
+<i class="fas fa-long-arrow-alt-right fragment"></i>
+<pre class="relative fragment">
+	<i class="fab fa-css3 absolute flex"></i>
+	<code>.item-6 {
+width: 12em; }
+
+.item-4 {
+	width: 8em; 
+}
+
+.item-2 {
+  width: 4em; 
+}
+	</code>
+</pre>
+</div>
+			</section>
+				<section id="s12">
+					<span class="slide-title">For</span>
+
+<div id="nesting-code" class="flex">
+<pre class="relative fragment">
+	<i class="fab fa-sass absolute flex"></i>
+	<code>@for $i from 1 through 3 
+  .item-#{$i} 
+    width: 2em * $i;
+	</code>
+</pre>
+<i class="fas fa-long-arrow-alt-right fragment"></i>
+<pre class="relative fragment">
+	<i class="fab fa-css3 absolute flex"></i>
+	<code>.item-1 {
+  width: 2em; 
+}
+
+.item-2 {
+  width: 4em; 
+}
+
+.item-3 {
+  width: 6em; 
+}
+	</code>
+</pre>
+</div>
+			</section>
+				<section id="s13">
+					<span class="slide-title">If</span>
+
+<div id="nesting-code" class="flex">
+<pre class="relative fragment">
+	<i class="fab fa-sass absolute flex"></i>
+	<code>$type: monster
+
+p 
+  @if $type == ocean 
+    color: blue;
+  @else if $type == matador
+    color: red
+  @else if $type == monster 
+    color: green
+  @else
+    color: black
+	</code>
+</pre>
+<i class="fas fa-long-arrow-alt-right fragment"></i>
+<pre class="relative fragment">
+	<i class="fab fa-css3 absolute flex"></i>
+	<code>p {
+  color: green;
+}
+	</code>
+</pre>
+</div>
+			</section>
 			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-    <script src="./lib/js/main.js"></script>
+		<script src="./lib/js/main.js"></script>
 		<script>
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration

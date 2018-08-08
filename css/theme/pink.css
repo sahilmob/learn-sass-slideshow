@@ -357,17 +357,84 @@ pre {
         transform: rotate(-45deg);
         margin-right: 15px; }
 
+#s4 pre,
+#s5 pre,
+#s6 pre,
+#s7 pre,
+#s8 pre,
+#s9 pre,
+#s10 pre,
+#s11 pre,
+#s12 pre,
+#s13 pre {
+  margin: 0; }
+  #s4 pre code,
+  #s5 pre code,
+  #s6 pre code,
+  #s7 pre code,
+  #s8 pre code,
+  #s9 pre code,
+  #s10 pre code,
+  #s11 pre code,
+  #s12 pre code,
+  #s13 pre code {
+    overflow-y: hidden; }
+
 #s4 #nesting-code,
 #s5 #nesting-code,
-#s6 #nesting-code {
+#s6 #nesting-code,
+#s7 #nesting-code,
+#s8 #nesting-code,
+#s9 #nesting-code,
+#s10 #nesting-code,
+#s11 #nesting-code,
+#s12 #nesting-code,
+#s13 #nesting-code {
   align-items: center; }
+  #s4 #nesting-code #files,
+  #s5 #nesting-code #files,
+  #s6 #nesting-code #files,
+  #s7 #nesting-code #files,
+  #s8 #nesting-code #files,
+  #s9 #nesting-code #files,
+  #s10 #nesting-code #files,
+  #s11 #nesting-code #files,
+  #s12 #nesting-code #files,
+  #s13 #nesting-code #files {
+    flex-direction: column;
+    justify-content: space-between; }
+    #s4 #nesting-code #files .file,
+    #s5 #nesting-code #files .file,
+    #s6 #nesting-code #files .file,
+    #s7 #nesting-code #files .file,
+    #s8 #nesting-code #files .file,
+    #s9 #nesting-code #files .file,
+    #s10 #nesting-code #files .file,
+    #s11 #nesting-code #files .file,
+    #s12 #nesting-code #files .file,
+    #s13 #nesting-code #files .file {
+      margin-top: 50px; }
   #s4 #nesting-code .fa-long-arrow-alt-right,
   #s5 #nesting-code .fa-long-arrow-alt-right,
-  #s6 #nesting-code .fa-long-arrow-alt-right {
+  #s6 #nesting-code .fa-long-arrow-alt-right,
+  #s7 #nesting-code .fa-long-arrow-alt-right,
+  #s8 #nesting-code .fa-long-arrow-alt-right,
+  #s9 #nesting-code .fa-long-arrow-alt-right,
+  #s10 #nesting-code .fa-long-arrow-alt-right,
+  #s11 #nesting-code .fa-long-arrow-alt-right,
+  #s12 #nesting-code .fa-long-arrow-alt-right,
+  #s13 #nesting-code .fa-long-arrow-alt-right {
     margin: 0 25px; }
   #s4 #nesting-code pre i,
   #s5 #nesting-code pre i,
-  #s6 #nesting-code pre i {
+  #s6 #nesting-code pre i,
+  #s7 #nesting-code pre i,
+  #s8 #nesting-code pre i,
+  #s9 #nesting-code pre i,
+  #s10 #nesting-code pre i,
+  #s11 #nesting-code pre i,
+  #s12 #nesting-code pre i,
+  #s13 #nesting-code pre i {
     right: -15px;
     top: 40px;
     background-color: #b3d4fc;
@@ -376,7 +443,14 @@ pre {
 
 #s4 h6,
 #s5 h6,
-#s6 h6 {
+#s6 h6,
+#s7 h6,
+#s8 h6,
+#s9 h6,
+#s10 h6,
+#s11 h6,
+#s12 h6,
+#s13 h6 {
   color: #699;
   text-align: left; }
 

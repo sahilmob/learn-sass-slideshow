@@ -156,9 +156,29 @@ pre{
 
 #s4,
 #s5,
-#s6 {
+#s6,
+#s7,
+#s8,
+#s9,
+#s10,
+#s11,
+#s12,
+#s13 {
+	pre{
+		margin: 0;
+		code{
+			overflow-y: hidden
+		}
+	}
 	#nesting-code{
 		align-items: center;
+		#files{
+			flex-direction: column;
+			justify-content: space-between;
+			.file{
+				margin-top: 50px;
+			}
+		}
 		.fa-long-arrow-alt-right{
 			margin: 0 25px;
 		}
